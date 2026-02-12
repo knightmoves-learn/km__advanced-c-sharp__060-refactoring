@@ -22,8 +22,10 @@ Before starting this lesson two new files at `HomeEnergyApi/Models/UserDbContext
 
 In `HomeEnergyApi/Models/UserRepository.cs`
   - Change `HomeDbContext` to `UserDbContext` anywhere it is used
-  - Run `dotnet test`
-    - You should have one more error...  `error CS1503: Argument 1:` at the file `UserRepository.Tests.cs`
+
+
+In `HomeEnergyApi/Models/UtilityProviderRepository.cs`
+  - Change `HomeDbContext` to `UtilityProviderDbContext` anywhere it is used
 
 Rename the file `HomeEnergyApi.Tests/Lesson60Tests/Helpers/MockDb.cs` to `MockHomeDb.cs`
   - Be sure to change the name of the class in the file, as well as renaming the file itself
