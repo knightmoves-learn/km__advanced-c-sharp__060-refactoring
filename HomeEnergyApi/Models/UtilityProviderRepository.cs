@@ -5,9 +5,9 @@ namespace HomeEnergyApi.Models
 
     public class UtilityProviderRepository : IWriteRepository<int, UtilityProvider>, IReadRepository<int, UtilityProvider>
     {
-        private HomeDbContext context;
+        private UtilityProviderDbContext context;
 
-        public UtilityProviderRepository(HomeDbContext context)
+        public UtilityProviderRepository(UtilityProviderDbContext context)
         {
             this.context = context;
         }
