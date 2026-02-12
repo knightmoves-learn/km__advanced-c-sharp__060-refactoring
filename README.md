@@ -23,7 +23,6 @@ Before starting this lesson two new files at `HomeEnergyApi/Models/UserDbContext
 In `HomeEnergyApi/Models/UserRepository.cs`
   - Change `HomeDbContext` to `UserDbContext` anywhere it is used
 
-
 In `HomeEnergyApi/Models/UtilityProviderRepository.cs`
   - Change `HomeDbContext` to `UtilityProviderDbContext` anywhere it is used
 
