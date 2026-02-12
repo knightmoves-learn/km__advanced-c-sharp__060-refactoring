@@ -49,6 +49,14 @@ builder.Services.AddDbContext<HomeDbContext>(options =>
     options.UseSqlite("Data Source=Homes.db").ConfigureWarnings(warings =>
     warings.Ignore(RelationalEventId.NonTransactionalMigrationOperationWarning)));
 
+builder.Services.AddDbContext<UserDbContext>(options =>
+    options.UseSqlite("Data Source=Homes.db").ConfigureWarnings(warings =>
+    warings.Ignore(RelationalEventId.NonTransactionalMigrationOperationWarning)));
+
+builder.Services.AddDbContext<UtilityProviderDbContext>(options =>
+    options.UseSqlite("Data Source=Homes.db").ConfigureWarnings(warings =>
+    warings.Ignore(RelationalEventId.NonTransactionalMigrationOperationWarning)));
+
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<GlobalExceptionFilter>();

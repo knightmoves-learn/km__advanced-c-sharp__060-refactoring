@@ -5,7 +5,7 @@ public class UserRepositoryTest : IAsyncLifetime
 {
     private readonly User _testUser;
     private UserRepository repository;
-    private HomeDbContext _context;
+    private UserDbContext _context;
 
     public UserRepositoryTest()
     {
@@ -21,7 +21,7 @@ public class UserRepositoryTest : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        _context = new MockDb().CreateDbContext();
+        _context = new MockUserDb().CreateDbContext();
         repository = new UserRepository(_context);
     }
 

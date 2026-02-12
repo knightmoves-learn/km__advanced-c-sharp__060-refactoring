@@ -1,7 +1,7 @@
 using HomeEnergyApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-public class MockDb : IDbContextFactory<HomeDbContext>
+public class MockHomeDb : IDbContextFactory<HomeDbContext>
 {
     public HomeDbContext CreateDbContext()
     {

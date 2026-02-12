@@ -5,7 +5,7 @@ public class UtilityProviderRepositoryTest : IAsyncLifetime
 {
     private readonly UtilityProvider _testUtilityProvider;
     private UtilityProviderRepository repository;
-    private HomeDbContext _context;
+    private UtilityProviderDbContext _context;
 
     public UtilityProviderRepositoryTest()
     {
@@ -19,7 +19,7 @@ public class UtilityProviderRepositoryTest : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        _context = new MockDb().CreateDbContext();
+        _context = new MockUtilityProviderDb().CreateDbContext();
         repository = new UtilityProviderRepository(_context);
     }
 

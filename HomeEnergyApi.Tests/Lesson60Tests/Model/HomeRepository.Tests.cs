@@ -21,7 +21,7 @@ public class HomeRepositoryTest : IAsyncLifetime
 
     public async Task InitializeAsync()
     {
-        _context = new MockDb().CreateDbContext();
+        _context = new MockHomeDb().CreateDbContext();
         repository = new HomeRepository(_context);
     }
 

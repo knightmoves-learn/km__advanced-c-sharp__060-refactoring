@@ -5,9 +5,9 @@ namespace HomeEnergyApi.Models
 
     public class UserRepository : IUserRepository
     {
-        private HomeDbContext context;
+        private UserDbContext context;
 
-        public UserRepository(HomeDbContext context)
+        public UserRepository(UserDbContext context)
         {
             this.context = context;
         }
